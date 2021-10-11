@@ -28,7 +28,6 @@ int main(int argc, char *argv[]) {
 
 	if(distance>2&&distance<=30){
 		long int tempDist=ceil((distance-2)*4);	//convert km into total count of 250m, use ceil() from math.h to always round value up
-		printf("TempDist: %d\n",tempDist);
 		result=result+((int)tempDist*2000);
 	}					
 
