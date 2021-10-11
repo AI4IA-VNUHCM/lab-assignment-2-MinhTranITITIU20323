@@ -19,7 +19,24 @@ int main(int argc, char *argv[]) {
 	float distance = atof(argv[1]);
 	int result;
 	//Your codes here
-	
+	int i;
+	result=15000;
+	if(distance<0)	{	
+		printf("Invalid!");
+		exit(0);
+	}	
+
+	if(distance>2&&distance<=30){
+		long int tempDist=ceil((distance-2)*4);	//convert km into total count of 250m, use ceil() from math.h to always round value up
+		printf("TempDist: %d\n",tempDist);
+		result=result+((int)tempDist*2000);
+	}					
+
+	if(distance>30)	{
+		float tempDist2=distance-30;
+		result=result+(28*4*2000)+(tempDist2)*5000;
+	}
+
 	printf("%d", result);
 	return 0;
 }
