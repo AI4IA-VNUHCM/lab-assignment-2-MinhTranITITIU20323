@@ -15,6 +15,20 @@ int main(int argc, char *argv[]) {
 	int testcase = atoi(argv[1]);
 	
 	//Your codes here
+	int i,testcase2=testcase;
+
+	for(i=2;i<=testcase;i++){
+
+		if(testcase%i==0&&testcase2==testcase){
+			printf("%d ",i);								//For the first value to print without suffix " *" in front
+			testcase=testcase/i;
+		}
+
+		while(testcase%i==0){
+			printf("* %d ",i);								//Check for 
+			testcase=testcase/i;
+		}
+	}
 	
 	
 	return 0;
